@@ -31,7 +31,7 @@ def game_over(placements):  # check for winning statements.
         if placements[0][i] == placements[1][i] and placements[0][i] == placements[2][i] and placements[0][i] != ' ':
             return False
     if placements[0][0] == placements[1][1] and placements[0][0] == placements[2][2] and placements[0][0] != ' ':
-        return False = #if win by diagonal
+        return False #if win by diagonal
     if placements[2][0] == placements[1][1] and placements[2][0] == placements[0][2] and placements[2][0] != ' ':
         return False #if win by backwards diagonal
 
@@ -47,7 +47,7 @@ while PlayAgain == 'y':
         print(f"{checkTurn(turn)} turn!") # tell which players turn it is
         Row, Column = get_place() # get place from user via function
         if board[Row][Column] == ' ': #if there is already some one in the spot it will tell the player to try again.
-            board[Row][Column] = checkTurn(turn
+            board[Row][Column] = checkTurn(turn)
             turn += 1
             boardprint(board)
         else:
@@ -57,4 +57,5 @@ while PlayAgain == 'y':
     if turn == 9: print('Its a Tie!')
     elif turn % 2 == 0: print('O Wins!')
     elif turn % 2 == 1: print ('X Wins!')
-    PlayAgain = input('play again? - y/n: ' #prompt if the palyer want to play again
+    PlayAgain = input('play again? - y/n: ') #prompt if the player wants to end the game
+
