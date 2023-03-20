@@ -1,48 +1,29 @@
 
 def boardprint(placements):
-
     print('_________')
-
     print(f"{placements[0][0]}|{placements[0][1]}|{placements[0][2]}")
-
     print('-----')
-
     print(f"{placements[1][0]}|{placements[1][1]}|{placements[1][2]}")
-
     print('-----')
-
     print(f"{placements[2][0]}|{placements[2][1]}|{placements[2][2]}")
-
     print('_________')
-
-
 
 def checkTurn(turnTest):
 
 
 
     if turnTest %2 == 0:
-
         return('X')
-
     else: return('O')
 
 
 
 def get_place():
-
     while(True):
-
-
-
         Row = input('enter row:')
-
         Column = input('enter column:')
-
         if (Row >='1' and Row <='3' and Column >='1' and Column <='3'): return int(Row) - 1 , int (Column) - 1
-
         else:
-
             print('Incorrect parameters for lines, they should be between 1 -> 3')
 
 def game_over(placements):
